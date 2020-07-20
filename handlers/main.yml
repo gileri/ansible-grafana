@@ -2,7 +2,7 @@
 - name: restart grafana
   become: true
   service:
-    name: grafana-server
+    name: "{{ grafana_server_service }}"
     state: restarted
   tags:
     - grafana_run

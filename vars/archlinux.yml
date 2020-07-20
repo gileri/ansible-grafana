@@ -1,0 +1,8 @@
+---
+grafana_package: grafana
+grafana_server_service: grafana.service
+
+# Until https://bugs.archlinux.org/task/67278
+grafana_config_file: /etc/grafana.ini
+
+grafana_dependencies: []

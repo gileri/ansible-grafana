@@ -1,3 +1,5 @@
 ---
 grafana_package: "grafana{{ (grafana_version != 'latest') | ternary('-' ~ grafana_version, '') }}"
+grafana_server_service: grafana-server.service
+grafana_config_file: /etc/grafana/grafana.ini
 grafana_dependencies: []

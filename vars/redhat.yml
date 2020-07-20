@@ -1,5 +1,7 @@
 ---
 grafana_package: "grafana{{ (grafana_version != 'latest') | ternary('-' ~ grafana_version, '') }}"
 # https://unix.stackexchange.com/questions/534463/cant-enable-grafana-on-boot-in-fedora-because-systemd-sysv-install-missing
+grafana_server_service: grafana-server.service
+grafana_config_file: /etc/grafana/grafana.ini
 grafana_dependencies:
   - chkconfig

@@ -16,7 +16,7 @@
 - name: Create grafana main configuration file
   template:
     src: grafana.ini.j2
-    dest: /etc/grafana/grafana.ini
+    dest: "{{ grafana_config_file }}"
     owner: root
     group: grafana
     mode: 0640
@@ -80,7 +80,7 @@
 
 - name: Enable and start Grafana systemd unit
   systemd:
-    name: grafana-server
+    name: "{{ grafana_server_service }}"
     enabled: true
     state: started
     daemon_reload: true
